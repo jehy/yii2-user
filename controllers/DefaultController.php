@@ -30,7 +30,7 @@ class DefaultController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['index', 'confirm', 'resend', 'logout'],
+                        'actions' => ['index', 'confirm', 'logout'],
                         'allow' => true,
                         'roles' => ['?', '@'],
                     ],
@@ -45,7 +45,7 @@ class DefaultController extends Controller
                         'roles' => ['?'],
                     ],
                     [
-                        'actions' => ['register', 'forgot', 'reset', 'login-email', 'login-callback'],
+                        'actions' => ['register', 'forgot', 'reset', 'login-email', 'login-callback', 'resend'],
                         'allow' => false,
                         'roles' => ['?'],
                     ],
