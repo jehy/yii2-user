@@ -40,8 +40,13 @@ class DefaultController extends Controller
                         'roles' => ['@'],
                     ],
                     [
-                        'actions' => ['login', 'register', 'forgot', 'reset', 'login-email', 'login-callback'],
+                        'actions' => ['login'],
                         'allow' => true,
+                        'roles' => ['?'],
+                    ],
+                    [
+                        'actions' => ['register', 'forgot', 'reset', 'login-email', 'login-callback'],
+                        'allow' => false,
                         'roles' => ['?'],
                     ],
                 ],
